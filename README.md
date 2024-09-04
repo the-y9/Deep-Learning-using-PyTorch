@@ -1,21 +1,16 @@
 # Deep-Learning-using-PyTorch
-### Day 1
-1. **Tensor Basics**:
-   - Creation: `torch.tensor()`, `torch.ones()`, `torch.rand()`.
-   - Attributes: Check dimensions (`ndim`, `shape`), data types (`dtype`).
-   - Device Management: Move tensors between CPU and GPU.
 
-2. **Operations**:
-   - Element access, slicing, broadcasting.
-   - Basic operations: `sum()`, `max()`, `mul()`, `matmul()`.
-   - Save/Load tensors: `torch.save()`, `torch.load()`.
+### Day 1 Summary
 
-3. **Autograd**:
-   - Compute gradients with `.backward()`.
-   - Leaf vs. intermediate tensors.
+- **Tensor Basics**: Creation (`torch.tensor()`, `torch.ones()`, `torch.rand()`), attributes (dimensions, data types), and device management (CPU/GPU).
+- **Operations**: Element access, slicing, broadcasting, basic operations (`sum()`, `max()`, `mul()`, `matmul`), and saving/loading tensors (`torch.save()`, `torch.load()`).
+- **Autograd**: Gradient computation (`.backward()`), leaf vs. intermediate tensors.
+- **Activation Functions**: Use functions like `torch.relu()` and `torch.sigmoid()`.
+- **Loss Functions**: Implement `nn.MSELoss()`, `nn.CrossEntropyLoss()`, ...
 
-4. **Activation Functions**:
-   - Use `torch.relu()`, `torch.sigmoid()`, and others from `torch.nn`.
+### Day 2 Summary
 
-5. **Loss Functions**:
-   - Implement `nn.MSELoss()`, `nn.CrossEntropyLoss()`, etc. for calculating loss.
+- **Optimization Algorithms**: SGD, Adagrad, RMSProp, Adam for model training.
+- **ANN Basics**: Layers (`nn.Linear`), model creation (`nn.Module`), and sequential models (`nn.Sequential`).
+- **Training Steps**: Forward pass, loss computation, backward pass, and parameter update.
+- **Example**: Train a model with California housing data using PyTorch.
