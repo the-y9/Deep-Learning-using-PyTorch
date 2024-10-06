@@ -1,5 +1,5 @@
-# Deep-Learning-using-PyTorch
-
+# Deep-Learning-using-PyTorch Notes
+Conducted by IIT Madras
 ### Day 1 Summary
 
 - **Tensor Basics**: Creation (`torch.tensor()`, `torch.ones()`, `torch.rand()`), attributes (dimensions, data types), and device management (CPU/GPU).
