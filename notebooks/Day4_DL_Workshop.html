@@ -380,14 +380,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">torch</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">torch.optim</span> <span class="k">as</span> <span class="nn">optim</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;torch&#39;
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.12.6/x64/lib/python3.12/site-packages/torch/_subclasses/functional_tensor.py:258: UserWarning: Failed to initialize NumPy: No module named &#39;numpy&#39; (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device(&quot;cpu&quot;))
 </pre></div>
 </div>
 </div>
@@ -407,38 +401,38 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(tensor([[[2., 1., 7., 6., 6.],
-          [4., 1., 2., 8., 5.],
-          [4., 2., 1., 2., 4.],
-          [9., 6., 1., 7., 4.],
-          [1., 5., 8., 8., 5.],
-          [8., 9., 6., 2., 8.],
-          [9., 9., 8., 2., 4.],
-          [2., 7., 7., 3., 4.],
-          [4., 6., 7., 7., 6.],
-          [7., 8., 1., 9., 2.]],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(tensor([[[5., 9., 7., 9., 2.],
+          [9., 5., 8., 7., 5.],
+          [3., 5., 6., 3., 8.],
+          [2., 9., 4., 4., 8.],
+          [9., 6., 9., 3., 9.],
+          [2., 3., 5., 6., 6.],
+          [4., 9., 3., 8., 9.],
+          [9., 3., 2., 4., 7.],
+          [6., 4., 8., 6., 6.],
+          [5., 1., 4., 3., 7.]],
  
-         [[5., 7., 4., 4., 9.],
-          [2., 6., 3., 7., 8.],
-          [6., 1., 9., 6., 1.],
-          [1., 6., 9., 3., 1.],
-          [8., 4., 6., 1., 5.],
-          [2., 8., 3., 5., 8.],
-          [7., 9., 1., 9., 7.],
-          [5., 3., 8., 9., 2.],
-          [3., 5., 3., 1., 7.],
-          [8., 9., 9., 5., 5.]],
+         [[2., 1., 6., 3., 9.],
+          [4., 1., 2., 6., 5.],
+          [9., 9., 2., 6., 4.],
+          [2., 7., 6., 8., 4.],
+          [5., 1., 1., 9., 4.],
+          [5., 3., 4., 6., 9.],
+          [1., 1., 1., 4., 4.],
+          [7., 7., 7., 4., 1.],
+          [1., 4., 8., 1., 9.],
+          [7., 5., 7., 5., 9.]],
  
-         [[9., 5., 8., 8., 1.],
-          [3., 4., 4., 8., 6.],
-          [4., 3., 2., 3., 4.],
-          [6., 5., 9., 5., 9.],
-          [8., 2., 5., 3., 3.],
-          [4., 5., 8., 7., 5.],
-          [3., 1., 9., 3., 8.],
-          [6., 6., 9., 3., 8.],
-          [1., 9., 6., 4., 3.],
-          [5., 3., 1., 7., 9.]]]),
+         [[1., 2., 4., 9., 4.],
+          [9., 7., 7., 2., 5.],
+          [5., 8., 5., 8., 6.],
+          [5., 3., 6., 1., 5.],
+          [5., 6., 9., 5., 1.],
+          [3., 5., 5., 1., 9.],
+          [6., 5., 6., 4., 7.],
+          [3., 1., 1., 2., 8.],
+          [7., 5., 1., 6., 3.],
+          [8., 6., 2., 2., 6.]]]),
  tensor([1, 0, 1]))
 </pre></div>
 </div>
@@ -460,46 +454,46 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Output: tensor([[[ 0.5045,  0.1786, -0.3201],
-         [ 0.6515, -0.0851, -0.1810],
-         [ 0.3787,  0.0769, -0.0376],
-         [ 0.5521,  0.1084, -0.3000],
-         [ 0.6386, -0.0420, -0.1752],
-         [ 0.0139,  0.1371,  0.0902],
-         [-0.4383,  0.0641,  0.1699],
-         [ 0.4530,  0.3072, -0.4711],
-         [ 0.7055, -0.1989, -0.1527],
-         [ 0.5455,  0.1551, -0.1572]],
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Output: tensor([[[ 0.6449, -0.0766,  0.7283],
+         [ 0.6077,  0.1497,  0.8718],
+         [-0.2005,  0.1970,  0.4518],
+         [-0.4215, -0.0902,  0.0098],
+         [-0.2595,  0.0399,  0.0438],
+         [ 0.3300, -0.4289,  0.0674],
+         [ 0.0486,  0.4306,  0.3240],
+         [-0.2728,  0.0531,  0.2213],
+         [ 0.4573, -0.3075,  0.5960],
+         [-0.1097,  0.1954,  0.2186]],
 
-        [[ 0.5159,  0.2215, -0.3548],
-         [ 0.6718, -0.1121, -0.1845],
-         [-0.1013, -0.5878,  0.6376],
-         [-0.1682,  0.5773, -0.2876],
-         [-0.3484, -0.4141,  0.3912],
-         [ 0.2966,  0.5705, -0.4817],
-         [ 0.7447, -0.3021, -0.2311],
-         [ 0.2062, -0.2974,  0.4160],
-         [ 0.0675,  0.5013, -0.3468],
-         [ 0.5905, -0.2177, -0.1901]],
+        [[-0.0945, -0.0163, -0.1428],
+         [ 0.1366, -0.0645,  0.0220],
+         [-0.0475,  0.5668,  0.6586],
+         [ 0.3847, -0.2713,  0.8164],
+         [-0.0056,  0.3979,  0.7666],
+         [-0.4575, -0.0943,  0.1991],
+         [-0.2144, -0.3137, -0.2163],
+         [ 0.6608, -0.1241,  0.5999],
+         [-0.0077,  0.1745,  0.2418],
+         [-0.2145,  0.0945,  0.2023]],
 
-        [[-0.0704, -0.4534,  0.4229],
-         [ 0.2828,  0.5673, -0.4557],
-         [ 0.6799, -0.3067, -0.1731],
-         [ 0.5087,  0.1982, -0.1122],
-         [-0.5247, -0.5452,  0.6538],
-         [ 0.1437,  0.6843, -0.5575],
-         [ 0.7114, -0.4333, -0.1226],
-         [ 0.2682,  0.2856,  0.0019],
-         [ 0.5884,  0.0452, -0.3813],
-         [ 0.6486, -0.0467, -0.1228]]], grad_fn=&lt;TransposeBackward1&gt;),
+        [[ 0.6109, -0.0889,  0.6805],
+         [ 0.0083,  0.5805,  0.8186],
+         [-0.2916,  0.2091,  0.7869],
+         [-0.0267, -0.4902,  0.3235],
+         [ 0.5847, -0.0822,  0.7120],
+         [-0.1435,  0.1645,  0.2463],
+         [-0.2190,  0.0466,  0.2393],
+         [-0.3391, -0.1211, -0.1862],
+         [-0.1217,  0.3661,  0.4363],
+         [-0.3909,  0.0221,  0.2269]]], grad_fn=&lt;TransposeBackward1&gt;),
 
- Hidden: tensor([[[ 0.9924,  1.0000,  0.9981],
-         [ 0.8782,  1.0000,  0.6755],
-         [ 0.9996,  1.0000,  0.9993]],
+ Hidden: tensor([[[ 0.7044,  0.9954, -0.9371],
+         [ 0.4315,  1.0000, -0.9208],
+         [ 0.4959,  1.0000, -0.9954]],
 
-        [[ 0.5455,  0.1551, -0.1572],
-         [ 0.5905, -0.2177, -0.1901],
-         [ 0.6486, -0.0467, -0.1228]]], grad_fn=&lt;StackBackward0&gt;)
+        [[-0.1097,  0.1954,  0.2186],
+         [-0.2145,  0.0945,  0.2023],
+         [-0.3909,  0.0221,  0.2269]]], grad_fn=&lt;StackBackward0&gt;)
 </pre></div>
 </div>
 </div>
@@ -512,9 +506,9 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Parameter containing:
-tensor([[ 0.0329,  0.3023, -0.3848],
-        [-0.1351, -0.4958,  0.4408],
-        [ 0.1412, -0.2268, -0.4836]], requires_grad=True)
+tensor([[ 0.5089, -0.0819, -0.4461],
+        [ 0.3835, -0.0786, -0.1048],
+        [ 0.3938,  0.2796,  0.2768]], requires_grad=True)
 </pre></div>
 </div>
 </div>
@@ -578,9 +572,9 @@ tensor([[ 0.0329,  0.3023, -0.3848],
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running Loss: 0.8875702023506165 for Epoch: 0
-Running Loss: 0.8181796669960022 for Epoch: 1
-Running Loss: 0.7569066882133484 for Epoch: 2
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running Loss: 0.6785677075386047 for Epoch: 0
+Running Loss: 0.6513562798500061 for Epoch: 1
+Running Loss: 0.62982177734375 for Epoch: 2
 </pre></div>
 </div>
 </div>
@@ -588,43 +582,6 @@ Running Loss: 0.7569066882133484 for Epoch: 2
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># !pip install torchtext==0.15.2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: torchtext==0.15.2 in /usr/local/lib/python3.10/dist-packages (0.15.2)
-Requirement already satisfied: tqdm in /usr/local/lib/python3.10/dist-packages (from torchtext==0.15.2) (4.66.5)
-Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (from torchtext==0.15.2) (2.32.3)
-Requirement already satisfied: torch==2.0.1 in /usr/local/lib/python3.10/dist-packages (from torchtext==0.15.2) (2.0.1)
-Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (from torchtext==0.15.2) (1.26.4)
-Requirement already satisfied: torchdata==0.6.1 in /usr/local/lib/python3.10/dist-packages (from torchtext==0.15.2) (0.6.1)
-Requirement already satisfied: filelock in /usr/local/lib/python3.10/dist-packages (from torch==2.0.1-&gt;torchtext==0.15.2) (3.15.4)
-Requirement already satisfied: typing-extensions in /usr/local/lib/python3.10/dist-packages (from torch==2.0.1-&gt;torchtext==0.15.2) (4.12.2)
-Requirement already satisfied: sympy in /usr/local/lib/python3.10/dist-packages (from torch==2.0.1-&gt;torchtext==0.15.2) (1.13.2)
-Requirement already satisfied: networkx in /usr/local/lib/python3.10/dist-packages (from torch==2.0.1-&gt;torchtext==0.15.2) (3.3)
-Requirement already satisfied: jinja2 in /usr/local/lib/python3.10/dist-packages (from torch==2.0.1-&gt;torchtext==0.15.2) (3.1.4)
-Requirement already satisfied: nvidia-cuda-nvrtc-cu11==11.7.99 in /usr/local/lib/python3.10/dist-packages (from torch==2.0.1-&gt;torchtext==0.15.2) (11.7.99)
-Requirement already satisfied: nvidia-cuda-runtime-cu11==11.7.99 in /usr/local/lib/python3.10/dist-packages (from torch==2.0.1-&gt;torchtext==0.15.2) (11.7.99)
-Requirement already satisfied: nvidia-cuda-cupti-cu11==11.7.101 in /usr/local/lib/python3.10/dist-packages (from torch==2.0.1-&gt;torchtext==0.15.2) (11.7.101)
-Requirement already satisfied: nvidia-cudnn-cu11==8.5.0.96 in /usr/local/lib/python3.10/dist-packages (from torch==2.0.1-&gt;torchtext==0.15.2) (8.5.0.96)
-Requirement already satisfied: nvidia-cublas-cu11==11.10.3.66 in /usr/local/lib/python3.10/dist-packages (from torch==2.0.1-&gt;torchtext==0.15.2) (11.10.3.66)
-Requirement already satisfied: nvidia-cufft-cu11==10.9.0.58 in /usr/local/lib/python3.10/dist-packages (from torch==2.0.1-&gt;torchtext==0.15.2) (10.9.0.58)
-Requirement already satisfied: nvidia-curand-cu11==10.2.10.91 in /usr/local/lib/python3.10/dist-packages (from torch==2.0.1-&gt;torchtext==0.15.2) (10.2.10.91)
-Requirement already satisfied: nvidia-cusolver-cu11==11.4.0.1 in /usr/local/lib/python3.10/dist-packages (from torch==2.0.1-&gt;torchtext==0.15.2) (11.4.0.1)
-Requirement already satisfied: nvidia-cusparse-cu11==11.7.4.91 in /usr/local/lib/python3.10/dist-packages (from torch==2.0.1-&gt;torchtext==0.15.2) (11.7.4.91)
-Requirement already satisfied: nvidia-nccl-cu11==2.14.3 in /usr/local/lib/python3.10/dist-packages (from torch==2.0.1-&gt;torchtext==0.15.2) (2.14.3)
-Requirement already satisfied: nvidia-nvtx-cu11==11.7.91 in /usr/local/lib/python3.10/dist-packages (from torch==2.0.1-&gt;torchtext==0.15.2) (11.7.91)
-Requirement already satisfied: triton==2.0.0 in /usr/local/lib/python3.10/dist-packages (from torch==2.0.1-&gt;torchtext==0.15.2) (2.0.0)
-Requirement already satisfied: urllib3&gt;=1.25 in /usr/local/lib/python3.10/dist-packages (from torchdata==0.6.1-&gt;torchtext==0.15.2) (2.0.7)
-Requirement already satisfied: setuptools in /usr/local/lib/python3.10/dist-packages (from nvidia-cublas-cu11==11.10.3.66-&gt;torch==2.0.1-&gt;torchtext==0.15.2) (71.0.4)
-Requirement already satisfied: wheel in /usr/local/lib/python3.10/dist-packages (from nvidia-cublas-cu11==11.10.3.66-&gt;torch==2.0.1-&gt;torchtext==0.15.2) (0.44.0)
-Requirement already satisfied: cmake in /usr/local/lib/python3.10/dist-packages (from triton==2.0.0-&gt;torch==2.0.1-&gt;torchtext==0.15.2) (3.30.2)
-Requirement already satisfied: lit in /usr/local/lib/python3.10/dist-packages (from triton==2.0.0-&gt;torch==2.0.1-&gt;torchtext==0.15.2) (18.1.8)
-Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;torchtext==0.15.2) (3.3.2)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;torchtext==0.15.2) (3.8)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;torchtext==0.15.2) (2024.8.30)
-Requirement already satisfied: MarkupSafe&gt;=2.0 in /usr/local/lib/python3.10/dist-packages (from jinja2-&gt;torch==2.0.1-&gt;torchtext==0.15.2) (2.1.5)
-Requirement already satisfied: mpmath&lt;1.4,&gt;=1.1.0 in /usr/local/lib/python3.10/dist-packages (from sympy-&gt;torch==2.0.1-&gt;torchtext==0.15.2) (1.3.0)
 </pre></div>
 </div>
 </div>
@@ -638,86 +595,14 @@ Requirement already satisfied: mpmath&lt;1.4,&gt;=1.1.0 in /usr/local/lib/python
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;AG_NEWS&#39;,
- &#39;AmazonReviewFull&#39;,
- &#39;AmazonReviewPolarity&#39;,
- &#39;CC100&#39;,
- &#39;CNNDM&#39;,
- &#39;CoLA&#39;,
- &#39;CoNLL2000Chunking&#39;,
- &#39;DATASETS&#39;,
- &#39;DBpedia&#39;,
- &#39;EnWik9&#39;,
- &#39;IMDB&#39;,
- &#39;IWSLT2016&#39;,
- &#39;IWSLT2017&#39;,
- &#39;MD5&#39;,
- &#39;MNLI&#39;,
- &#39;MRPC&#39;,
- &#39;Multi30k&#39;,
- &#39;NUM_LINES&#39;,
- &#39;PennTreebank&#39;,
- &#39;QNLI&#39;,
- &#39;QQP&#39;,
- &#39;RTE&#39;,
- &#39;SQuAD1&#39;,
- &#39;SQuAD2&#39;,
- &#39;SST2&#39;,
- &#39;STSB&#39;,
- &#39;SogouNews&#39;,
- &#39;UDPOS&#39;,
- &#39;URLS&#39;,
- &#39;WNLI&#39;,
- &#39;WikiText103&#39;,
- &#39;WikiText2&#39;,
- &#39;YahooAnswers&#39;,
- &#39;YelpReviewFull&#39;,
- &#39;YelpReviewPolarity&#39;,
- &#39;__all__&#39;,
- &#39;__builtins__&#39;,
- &#39;__cached__&#39;,
- &#39;__doc__&#39;,
- &#39;__file__&#39;,
- &#39;__loader__&#39;,
- &#39;__name__&#39;,
- &#39;__package__&#39;,
- &#39;__path__&#39;,
- &#39;__spec__&#39;,
- &#39;ag_news&#39;,
- &#39;amazonreviewfull&#39;,
- &#39;amazonreviewpolarity&#39;,
- &#39;cc100&#39;,
- &#39;cnndm&#39;,
- &#39;cola&#39;,
- &#39;conll2000chunking&#39;,
- &#39;dataset&#39;,
- &#39;dataset_module&#39;,
- &#39;dataset_module_path&#39;,
- &#39;dbpedia&#39;,
- &#39;enwik9&#39;,
- &#39;imdb&#39;,
- &#39;importlib&#39;,
- &#39;iwslt2016&#39;,
- &#39;iwslt2017&#39;,
- &#39;mnli&#39;,
- &#39;mrpc&#39;,
- &#39;multi30k&#39;,
- &#39;penntreebank&#39;,
- &#39;qnli&#39;,
- &#39;qqp&#39;,
- &#39;rte&#39;,
- &#39;sogounews&#39;,
- &#39;squad1&#39;,
- &#39;squad2&#39;,
- &#39;sst2&#39;,
- &#39;stsb&#39;,
- &#39;udpos&#39;,
- &#39;wikitext103&#39;,
- &#39;wikitext2&#39;,
- &#39;wnli&#39;,
- &#39;yahooanswers&#39;,
- &#39;yelpreviewfull&#39;,
- &#39;yelpreviewpolarity&#39;]
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">torchtext</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">torchtext.datasets</span> <span class="k">as</span> <span class="nn">datasets</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">dir</span><span class="p">(</span><span class="n">datasets</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;torchtext&#39;
 </pre></div>
 </div>
 </div>
