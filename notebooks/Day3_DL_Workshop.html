@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; Deep Learning Using PyTorch</title>
+    <title>RNN &#8212; Deep Learning Using PyTorch</title>
   
   
   
@@ -175,7 +175,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Day1_DL_pytorch.html">Tensor attributes</a></li>
 
 
@@ -185,6 +185,7 @@
 
 
 <li class="toctree-l1"><a class="reference internal" href="Day2_DL_Workshop.html">Artificial Neural Networks</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">RNN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Day4_DL_Workshop.html">RNN</a></li>
 </ul>
 
@@ -311,9 +312,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -324,19 +323,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>RNN</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -347,6 +338,17 @@ document.write(`
                 <article class="bd-article">
                   
   <p><a href="https://colab.research.google.com/github/the-y9/Deep-Learning-using-PyTorch/blob/main/Day3_DL_Workshop.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
+<section class="tex2jax_ignore mathjax_ignore" id="rnn">
+<h1>RNN<a class="headerlink" href="#rnn" title="Link to this heading">#</a></h1>
+<p>The movie was fantastic</p>
+<ul class="simple">
+<li><p><strong>seq lenghth</strong> = 4</p></li>
+<li><p><strong>input/embedded dimension</strong> = 5(state vector dimensions)</p></li>
+<li><p><strong>hidden dimension</strong></p></li>
+<li><p><strong>Linear layer</strong> for final output
+<span class="math notranslate nohighlight">\( h_0 -&gt;h_1-&gt;h_2-&gt;h_3-&gt;h_4 \)</span>
+<span class="math notranslate nohighlight">\(  \)</span></p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
@@ -2478,6 +2480,7 @@ tensor(0.0994)
 </div>
 </div>
 </div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2533,21 +2536,6 @@ tensor(0.0994)
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>
