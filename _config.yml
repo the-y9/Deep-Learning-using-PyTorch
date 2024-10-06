@@ -1,6 +1,16 @@
 title: "Deep Learning Using PyTorch"
 author: "Yash Mishra"
+copyright: "2024"
 logo: ""
 language: "en"
 execute:
   execute_notebooks: "auto"
+  
+repository:
+  url: https://github.com/karthik-iitm/mlt-workshop  # Online location of your book
+  path_to_book: docs  # Optional path to your book, relative to the repository root
+  branch: master  # Which branch of the repository should be used when creating links (optional)
+
+html:
+  use_issues_button: true
+  use_repository_button: true
