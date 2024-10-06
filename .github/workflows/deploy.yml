@@ -1,0 +1,32 @@
+name: Deploy Jupyter Book to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Change this to the branch where your content is
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v2
+      
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install jupyter-book
+
+      - name: Build the Jupyter Book
+        run: jupyter-book build .
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_build/html
