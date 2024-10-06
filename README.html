@@ -338,6 +338,8 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-1-summary">Day 1 Summary</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-2-summary">Day 2 Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-3-summary-cnns">Day 3 Summary: CNNs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-4-summary-rnns">Day 4 Summary: RNNs</a></li>
 </ul>
             </nav>
         </div>
@@ -370,6 +372,25 @@ document.write(`
 <li><p><strong>Training Steps</strong>: Forward pass, loss computation, backward pass, and parameter update.</p></li>
 <li><p><strong>Example</strong>: Train a model with California housing data using PyTorch.</p></li>
 </ul>
+</section>
+<section id="day-3-summary-cnns">
+<h2>Day 3 Summary: CNNs<a class="headerlink" href="#day-3-summary-cnns" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Data Handling</strong>: Loaded FashionMNIST dataset and applied transformations for normalization; utilized <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code> for batching.</p></li>
+<li><p><strong>CNN Model</strong>: Built a custom CNN with two convolutional layers and three fully connected layers for 10-class classification.</p></li>
+<li><p><strong>Training</strong>: Used <code class="docutils literal notranslate"><span class="pre">nn.CrossEntropyLoss()</span></code> and SGD for optimization; implemented a training loop to update parameters and track accuracy.</p></li>
+<li><p><strong>Evaluation</strong>: Tested the model on a separate dataset and calculated accuracy.</p></li>
+</ul>
+</section>
+<section id="day-4-summary-rnns">
+<h2>Day 4 Summary: RNNs<a class="headerlink" href="#day-4-summary-rnns" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>RNN Introduction</strong>: Explored RNNs with an example using <code class="docutils literal notranslate"><span class="pre">nn.RNN</span></code>, focusing on sequence length and input dimensions.</p></li>
+<li><p><strong>Model Definition</strong>: Created a <code class="docutils literal notranslate"><span class="pre">simplernn</span></code> class with RNN and linear layers.</p></li>
+<li><p><strong>Training</strong>: Implemented training with <code class="docutils literal notranslate"><span class="pre">CrossEntropyLoss</span></code> and Adam optimizer, tracking loss over epochs.</p></li>
+<li><p><strong>Text Preprocessing</strong>: Worked with the IMDB dataset for tokenization, vocabulary creation, and padding sequences.</p></li>
+<li><p><strong>Final RNN Model</strong>: Built an RNN model for text classification with embedding and output layers.</p></li>
+</ol>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -432,6 +453,8 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-1-summary">Day 1 Summary</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-2-summary">Day 2 Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-3-summary-cnns">Day 3 Summary: CNNs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#day-4-summary-rnns">Day 4 Summary: RNNs</a></li>
 </ul>
   </nav></div>
 
