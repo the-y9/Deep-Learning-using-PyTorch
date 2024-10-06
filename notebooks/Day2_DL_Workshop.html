@@ -371,12 +371,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.12.6/x64/lib/python3.12/site-packages/torch/_subclasses/functional_tensor.py:258: UserWarning: Failed to initialize NumPy: No module named &#39;numpy&#39; (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:84.)
-  cpu = _conversion_method_template(device=torch.device(&quot;cpu&quot;))
-</pre></div>
-</div>
-</div>
 </div>
 <section id="optimizers">
 <h2>Optimizers<a class="headerlink" href="#optimizers" title="Link to this heading">#</a></h2>
@@ -439,7 +433,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([-0.9868, -0.2944], grad_fn=&lt;ViewBackward0&gt;)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([1.8182, 2.3985], grad_fn=&lt;ViewBackward0&gt;)
 </pre></div>
 </div>
 </div>
@@ -452,8 +446,8 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Parameter containing:
-tensor([[-0.3081, -0.0894, -0.3387],
-        [-0.3696, -0.5190,  0.3322]], requires_grad=True)
+tensor([[ 0.1950, -0.0120,  0.4583],
+        [ 0.0805,  0.5762,  0.2274]], requires_grad=True)
 </pre></div>
 </div>
 </div>
@@ -466,7 +460,7 @@ tensor([[-0.3081, -0.0894, -0.3387],
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Parameter containing:
-tensor([0.5160, 0.1166], requires_grad=True)
+tensor([0.2723, 0.4836], requires_grad=True)
 </pre></div>
 </div>
 </div>
@@ -490,8 +484,8 @@ tensor([0.5160, 0.1166], requires_grad=True)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[-0.3081, -0.0894, -0.3387],
-        [-0.3696, -0.5190,  0.3322]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[ 0.1950, -0.0120,  0.4583],
+        [ 0.0805,  0.5762,  0.2274]])
 </pre></div>
 </div>
 </div>
@@ -593,21 +587,21 @@ tensor([0.5160, 0.1166], requires_grad=True)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[ 0.9628],
-        [ 0.4891],
-        [ 0.0154],
-        [-0.4583],
-        [-0.9320],
-        [-1.4057],
-        [-1.8794],
-        [-2.3531],
-        [-2.8267],
-        [-3.3004],
-        [-3.7741],
-        [-4.2478],
-        [-4.7215],
-        [-5.1952],
-        [-5.6689]], grad_fn=&lt;AddmmBackward0&gt;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[-0.4360],
+        [ 0.0446],
+        [ 0.5253],
+        [ 1.0060],
+        [ 1.4866],
+        [ 1.9673],
+        [ 2.4480],
+        [ 2.9286],
+        [ 3.4093],
+        [ 3.8900],
+        [ 4.3706],
+        [ 4.8513],
+        [ 5.3320],
+        [ 5.8127],
+        [ 6.2933]], grad_fn=&lt;AddmmBackward0&gt;)
 </pre></div>
 </div>
 </div>
@@ -620,9 +614,9 @@ tensor([0.5160, 0.1166], requires_grad=True)
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(Parameter containing:
- tensor([[-0.6632]], requires_grad=True),
+ tensor([[0.6729]], requires_grad=True),
  Parameter containing:
- tensor([0.9628], requires_grad=True))
+ tensor([-0.4360], requires_grad=True))
 </pre></div>
 </div>
 </div>
@@ -672,7 +666,7 @@ tensor([0.5160, 0.1166], requires_grad=True)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[-0.0733]], grad_fn=&lt;AddmmBackward0&gt;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[0.2076]], grad_fn=&lt;AddmmBackward0&gt;)
 </pre></div>
 </div>
 </div>
@@ -685,22 +679,22 @@ tensor([0.5160, 0.1166], requires_grad=True)
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Parameter containing:
-tensor([[ 0.2680, -0.2356,  0.2455,  0.1072, -0.1827, -0.2437,  0.1947,  0.2820,
-         -0.3051,  0.2556],
-        [-0.0469, -0.2554,  0.1458, -0.1801,  0.2317,  0.0740,  0.1312,  0.0534,
-         -0.2746, -0.2326],
-        [ 0.0977,  0.1812,  0.0247,  0.0967, -0.0672, -0.2301, -0.3005,  0.2125,
-          0.2651,  0.2885],
-        [ 0.0848, -0.2622, -0.0960,  0.2227, -0.2355,  0.0437, -0.0641,  0.1486,
-         -0.1144,  0.2227],
-        [ 0.2141,  0.1896,  0.0947,  0.2832,  0.0703, -0.1084,  0.1587,  0.0463,
-         -0.1949,  0.2814]], requires_grad=True)
+tensor([[ 0.2808, -0.1114,  0.1888, -0.2826, -0.2427,  0.0115, -0.1555,  0.0122,
+          0.0483,  0.1982],
+        [ 0.2067, -0.2706,  0.0773,  0.2516, -0.1228,  0.1968, -0.0701,  0.2607,
+          0.1756, -0.0746],
+        [-0.2502, -0.2288, -0.0711,  0.1776,  0.1584,  0.1324,  0.2722, -0.1512,
+          0.0134,  0.1621],
+        [ 0.2047,  0.1089,  0.0050,  0.3134,  0.1864, -0.2058, -0.1854, -0.0431,
+         -0.2346, -0.0805],
+        [-0.1532, -0.2274,  0.2197, -0.1309,  0.2809, -0.1158, -0.0459,  0.2951,
+         -0.1890,  0.0445]], requires_grad=True)
 Parameter containing:
-tensor([-0.1942,  0.2992, -0.0479, -0.0322, -0.0336], requires_grad=True)
+tensor([-0.1000, -0.2896, -0.1339,  0.1728,  0.1774], requires_grad=True)
 Parameter containing:
-tensor([[-0.3085,  0.1662, -0.2994, -0.0644,  0.0736]], requires_grad=True)
+tensor([[ 0.1222,  0.0933,  0.2056, -0.2528,  0.1505]], requires_grad=True)
 Parameter containing:
-tensor([-0.0156], requires_grad=True)
+tensor([0.1591], requires_grad=True)
 </pre></div>
 </div>
 </div>
@@ -714,22 +708,22 @@ tensor([-0.0156], requires_grad=True)
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Parameter containing:
-tensor([[ 0.2680, -0.2356,  0.2455,  0.1072, -0.1827, -0.2437,  0.1947,  0.2820,
-         -0.3051,  0.2556],
-        [-0.0469, -0.2554,  0.1458, -0.1801,  0.2317,  0.0740,  0.1312,  0.0534,
-         -0.2746, -0.2326],
-        [ 0.0977,  0.1812,  0.0247,  0.0967, -0.0672, -0.2301, -0.3005,  0.2125,
-          0.2651,  0.2885],
-        [ 0.0848, -0.2622, -0.0960,  0.2227, -0.2355,  0.0437, -0.0641,  0.1486,
-         -0.1144,  0.2227],
-        [ 0.2141,  0.1896,  0.0947,  0.2832,  0.0703, -0.1084,  0.1587,  0.0463,
-         -0.1949,  0.2814]], requires_grad=True)
+tensor([[ 0.2808, -0.1114,  0.1888, -0.2826, -0.2427,  0.0115, -0.1555,  0.0122,
+          0.0483,  0.1982],
+        [ 0.2067, -0.2706,  0.0773,  0.2516, -0.1228,  0.1968, -0.0701,  0.2607,
+          0.1756, -0.0746],
+        [-0.2502, -0.2288, -0.0711,  0.1776,  0.1584,  0.1324,  0.2722, -0.1512,
+          0.0134,  0.1621],
+        [ 0.2047,  0.1089,  0.0050,  0.3134,  0.1864, -0.2058, -0.1854, -0.0431,
+         -0.2346, -0.0805],
+        [-0.1532, -0.2274,  0.2197, -0.1309,  0.2809, -0.1158, -0.0459,  0.2951,
+         -0.1890,  0.0445]], requires_grad=True)
 Parameter containing:
-tensor([-0.1942,  0.2992, -0.0479, -0.0322, -0.0336], requires_grad=True)
+tensor([-0.1000, -0.2896, -0.1339,  0.1728,  0.1774], requires_grad=True)
 Parameter containing:
-tensor([[-0.3085,  0.1662, -0.2994, -0.0644,  0.0736]], requires_grad=True)
+tensor([[ 0.1222,  0.0933,  0.2056, -0.2528,  0.1505]], requires_grad=True)
 Parameter containing:
-tensor([-0.0156], requires_grad=True)
+tensor([0.1591], requires_grad=True)
 </pre></div>
 </div>
 </div>
@@ -784,7 +778,7 @@ torch.Size([1])
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[0.0426]], grad_fn=&lt;AddmmBackward0&gt;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[0.2254]], grad_fn=&lt;AddmmBackward0&gt;)
 </pre></div>
 </div>
 </div>
@@ -798,18 +792,18 @@ torch.Size([1])
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(Parameter containing:
- tensor([[-0.2696,  0.0618,  0.1202,  0.1157, -0.0401,  0.1451, -0.0378, -0.0863,
-          -0.2944, -0.1913],
-         [ 0.3157, -0.1628, -0.1815,  0.1279,  0.0240,  0.2028,  0.0911,  0.1412,
-           0.2026,  0.2037],
-         [ 0.0741,  0.2478, -0.3135,  0.1419,  0.0560, -0.1349, -0.0939,  0.1050,
-          -0.2120, -0.1194],
-         [-0.2380, -0.2594,  0.1331, -0.1336, -0.0269,  0.1946,  0.1006, -0.1904,
-           0.2203,  0.2817],
-         [ 0.1556, -0.1068, -0.2835, -0.2727, -0.1539,  0.0725, -0.2436,  0.1747,
-           0.0516,  0.0703]], requires_grad=True),
+ tensor([[ 0.1242, -0.0382,  0.3008,  0.2579,  0.0028, -0.0224, -0.2884,  0.0234,
+           0.3092, -0.0787],
+         [-0.1262,  0.0699, -0.2150,  0.0678, -0.1139, -0.0450, -0.1646, -0.2367,
+          -0.3083, -0.0698],
+         [-0.1389,  0.2160,  0.2531, -0.0666, -0.3117, -0.1947, -0.3133,  0.3079,
+          -0.0470,  0.2974],
+         [ 0.3088,  0.2413, -0.3075,  0.1829, -0.2774, -0.1350, -0.0474, -0.3045,
+          -0.1724,  0.1711],
+         [-0.1084, -0.2875,  0.1624,  0.1075,  0.2109, -0.0069, -0.1371, -0.2284,
+           0.0158, -0.1902]], requires_grad=True),
  Parameter containing:
- tensor([-0.0652], requires_grad=True))
+ tensor([0.3777], requires_grad=True))
 </pre></div>
 </div>
 </div>
@@ -872,18 +866,18 @@ torch.Size([1])
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch: 0, Loss: 1.0757852792739868
-Epoch: 100, Loss: 1.0039175748825073
-Epoch: 200, Loss: 0.9771752953529358
-Epoch: 300, Loss: 0.9528486728668213
-Epoch: 400, Loss: 0.9244428873062134
-Epoch: 500, Loss: 0.8918813467025757
-Epoch: 600, Loss: 0.8628224730491638
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch: 0, Loss: 0.9478951096534729
+Epoch: 100, Loss: 0.7821676731109619
+Epoch: 200, Loss: 0.7391567230224609
+Epoch: 300, Loss: 0.7106150984764099
+Epoch: 400, Loss: 0.687940239906311
+Epoch: 500, Loss: 0.6654683947563171
+Epoch: 600, Loss: 0.6441647410392761
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch: 700, Loss: 0.8358402848243713
-Epoch: 800, Loss: 0.8115534782409668
-Epoch: 900, Loss: 0.7862898111343384
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch: 700, Loss: 0.6237970590591431
+Epoch: 800, Loss: 0.6034518480300903
+Epoch: 900, Loss: 0.5828593969345093
 </pre></div>
 </div>
 </div>
@@ -909,23 +903,22 @@ Epoch: 900, Loss: 0.7862898111343384
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">31</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">10</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">true_w</span> <span class="o">=</span> <span class="mi">3</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;numpy&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 <span class="n">xtrain</span><span class="p">,</span> <span class="n">xtest</span><span class="p">,</span> <span class="n">ytrain</span><span class="p">,</span> <span class="n">ytest</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span> <span class="mi">24</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">32</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">xtrain</span><span class="p">,</span> <span class="n">xtest</span><span class="p">,</span> <span class="n">ytrain</span><span class="p">,</span> <span class="n">ytest</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span> <span class="mi">24</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
 </pre></div>
 </div>
 </div>

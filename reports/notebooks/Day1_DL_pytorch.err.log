@@ -18,14 +18,25 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import numpy as np
+cuda_tensor = torch.tensor([1.0,2,3],device = 'cuda')
+cuda_tensor.device
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[4], line 1[0m
-[0;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
+[0;31mRuntimeError[0m                              Traceback (most recent call last)
+Cell [0;32mIn[18], line 1[0m
+[0;32m----> 1[0m cuda_tensor [38;5;241m=[39m [43mtorch[49m[38;5;241;43m.[39;49m[43mtensor[49m[43m([49m[43m[[49m[38;5;241;43m1.0[39;49m[43m,[49m[38;5;241;43m2[39;49m[43m,[49m[38;5;241;43m3[39;49m[43m][49m[43m,[49m[43mdevice[49m[43m [49m[38;5;241;43m=[39;49m[43m [49m[38;5;124;43m'[39;49m[38;5;124;43mcuda[39;49m[38;5;124;43m'[39;49m[43m)[49m
+[1;32m      2[0m cuda_tensor[38;5;241m.[39mdevice
 
-[0;31mModuleNotFoundError[0m: No module named 'numpy'
+File [0;32m/opt/hostedtoolcache/Python/3.12.6/x64/lib/python3.12/site-packages/torch/cuda/__init__.py:314[0m, in [0;36m_lazy_init[0;34m()[0m
+[1;32m    312[0m [38;5;28;01mif[39;00m [38;5;124m"[39m[38;5;124mCUDA_MODULE_LOADING[39m[38;5;124m"[39m [38;5;129;01mnot[39;00m [38;5;129;01min[39;00m os[38;5;241m.[39menviron:
+[1;32m    313[0m     os[38;5;241m.[39menviron[[38;5;124m"[39m[38;5;124mCUDA_MODULE_LOADING[39m[38;5;124m"[39m] [38;5;241m=[39m [38;5;124m"[39m[38;5;124mLAZY[39m[38;5;124m"[39m
+[0;32m--> 314[0m [43mtorch[49m[38;5;241;43m.[39;49m[43m_C[49m[38;5;241;43m.[39;49m[43m_cuda_init[49m[43m([49m[43m)[49m
+[1;32m    315[0m [38;5;66;03m# Some of the queued calls may reentrantly call _lazy_init();[39;00m
+[1;32m    316[0m [38;5;66;03m# we need to just return without initializing in that case.[39;00m
+[1;32m    317[0m [38;5;66;03m# However, we must not let any *other* threads in![39;00m
+[1;32m    318[0m _tls[38;5;241m.[39mis_initializing [38;5;241m=[39m [38;5;28;01mTrue[39;00m
+
+[0;31mRuntimeError[0m: Found no NVIDIA driver on your system. Please check that you have an NVIDIA GPU and installed a driver from http://www.nvidia.com/Download/index.aspx
 

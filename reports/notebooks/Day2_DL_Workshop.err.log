@@ -18,21 +18,16 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import numpy as np
-X = np.random.rand(100, 1)*10
-true_w = 3
-true_b = 2
-y = true_w*X + true_b + np.random.randn(100, 1)*0.2
-
+from sklearn.model_selection import train_test_split
+xtrain, xtest, ytrain, ytest = train_test_split(X,y, test_size = 0.2,random_state= 24)
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[31], line 1[0m
-[0;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
-[1;32m      2[0m X [38;5;241m=[39m np[38;5;241m.[39mrandom[38;5;241m.[39mrand([38;5;241m100[39m, [38;5;241m1[39m)[38;5;241m*[39m[38;5;241m10[39m
-[1;32m      3[0m true_w [38;5;241m=[39m [38;5;241m3[39m
+Cell [0;32mIn[32], line 1[0m
+[0;32m----> 1[0m [38;5;28;01mfrom[39;00m [38;5;21;01msklearn[39;00m[38;5;21;01m.[39;00m[38;5;21;01mmodel_selection[39;00m [38;5;28;01mimport[39;00m train_test_split
+[1;32m      2[0m xtrain, xtest, ytrain, ytest [38;5;241m=[39m train_test_split(X,y, test_size [38;5;241m=[39m [38;5;241m0.2[39m,random_state[38;5;241m=[39m [38;5;241m24[39m)
 
-[0;31mModuleNotFoundError[0m: No module named 'numpy'
+[0;31mModuleNotFoundError[0m: No module named 'sklearn'
 
