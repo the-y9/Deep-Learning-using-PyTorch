@@ -3,8 +3,8 @@ name: Deploy Jupyter Book to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change this to the branch where your content is
-
+      - main
+      
 jobs:
   build:
     runs-on: ubuntu-latest
